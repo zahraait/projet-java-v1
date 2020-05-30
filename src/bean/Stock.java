@@ -59,7 +59,7 @@ public class Stock {
 
     @Override
     public String toString() {
-        return "Stock{" + "id=" + id + ", magasin=" + magasin + ", qte=" + qte + ", produit=" + produit + '}';
+        return "Stock{" + "id=" + id + ", magasin=" + magasin.getLibelle() + ", qte=" + qte + ", produit=" + produit.getLibelle() + '}';
     }
     
 
