@@ -14,49 +14,25 @@ import java.util.ArrayList;
  * @author hp
  */
 public class StockService {
-     public Stock findByMagasinAndProduit(String  magasin,Produit produit,Double qte,ArrayList<Stock> stocks){
+     public Stock findByMagasinAndProduit(String libelleMagasin,String libelleProduit,ArrayList<Stock> stocks){
          for (Stock stock : stocks) {
-             if(stock.getMagasin().equals(magasin)&&stock.getProduit().equals(produit)){
-                 Double nvQte=stock.getQte()+qte;
-                 stock.setQte(nvQte);
-             }else{
-                 
+             if(stock.getMagasin().getLibelle().equals(libelleMagasin)&&stock.getProduit().getLibelle().equals(libelleProduit)){
+              return stock;
              }
-             
          }
          return null;
-    
      }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    private Stock create (Long id,ArrayList<Stock> stocks){
-        for (Stock stock : stocks) {
-            if(stock.getId().equals(id)){
-                return stock;
-            }
-            
-        }
-        return null;
-   
+    public int create (Stock stock,ArrayList<Stock> stocks){
+         Stock myStock = findByMagasinAndProduit(stock.getMagasin().getLibelle(), stock.getProduit().getLibelle(), stocks);
+         if(myStock==null){
+             stocks.add(stock);
+             return 1;
+         }else{
+             myStock.setQte(myStock.getQte()+stock.getQte());
+             return 2;
+         }
     }
-  int Stock findByMagasin 
-         
+    
 }

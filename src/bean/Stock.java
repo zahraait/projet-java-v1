@@ -11,14 +11,14 @@ package bean;
  */
 public class Stock {
     private Long id;
-    private String magasin;
+    private Magasin magasin;
     private Double qte;
     private Produit produit;
 
     public Stock() {
     }
 
-    public Stock(Long id, String magasin, Double qte, Produit produit) {
+    public Stock(Long id, Magasin magasin, Double qte, Produit produit) {
         this.id = id;
         this.magasin = magasin;
         this.qte = qte;
@@ -33,11 +33,11 @@ public class Stock {
         this.id = id;
     }
 
-    public String getMagasin() {
+    public Magasin getMagasin() {
         return magasin;
     }
 
-    public void setMagasin(String magasin) {
+    public void setMagasin(Magasin magasin) {
         this.magasin = magasin;
     }
 
@@ -62,5 +62,6 @@ public class Stock {
         return "Stock{" + "id=" + id + ", magasin=" + magasin + ", qte=" + qte + ", produit=" + produit + '}';
     }
     
+
     
 }

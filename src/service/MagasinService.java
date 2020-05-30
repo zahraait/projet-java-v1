@@ -13,12 +13,23 @@ import java.util.ArrayList;
  * @author hp
  */
 public class MagasinService {
-    private Magasin findBylibelleAndId(String libelle,Long id,ArrayList<Magasin> magasins){
+    public Magasin findBylibelleAndId(String libelle,Long id,ArrayList<Magasin> magasins){
         for (Magasin magasin : magasins) {
-           if(magasin.getLibelle().equals(libelle)&&magasin) 
+           if(magasin.getLibelle().equals(libelle)&&magasin.getId()==id){
+               return magasin;
+           } 
         }
-        
+        return null;
     }
-    
+   
+    public int save(Magasin m,ArrayList<Magasin> magasins){
+        if(findBylibelleAndId(m.getLibelle(),m.getId(),magasins)!=null){
+           return -1; 
+        }else{
+            magasins.add(m);
+        }
+        return 1;
+            
+    }
 }
  
