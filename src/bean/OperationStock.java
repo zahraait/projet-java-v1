@@ -14,7 +14,7 @@ public class OperationStock {
     private Produit produit;
     private Magasin magasin;
     private Double qte;
-    private int type;//TYPE1= ENTREE    TYPE2=SORTIE
+    private int type;//TYPE=1 :ENTREE    TYPE=2 : SORTIE
 
     public OperationStock() {
     }
