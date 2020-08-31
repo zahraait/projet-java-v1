@@ -27,9 +27,17 @@ public class MagasinService {
            return -1; 
         }else{
             magasins.add(m);
-        }
-        return 1;
-            
+             return 1;
+        }     
+    }
+    public int delete (Magasin magasin,ArrayList<Magasin> magasins){
+      if(findBylibelleAndId(magasin.getLibelle(),magasin.getId(),magasins)==null){
+          return -1;
+      }
+        else{
+          magasins.remove(magasin);
+          return 1;
+      }
     }
 }
  

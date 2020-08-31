@@ -25,6 +25,10 @@ public class Stock {
         this.produit = produit;
     }
 
+    public Stock(long l, Magasin m, Produit p, double d) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     public Long getId() {
         return id;
     }

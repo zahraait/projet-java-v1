@@ -15,6 +15,18 @@ import java.util.List;
  * @author hp
  */
 public class StockService {
+     public Stock findById(Long id, List<Stock> stocks) {
+        for (Stock stock : stocks) {
+            if (stock.getId()==id) {
+                return stock;
+            }
+        }
+        return null;
+    }
+
+    
+    
+    
 
     public Stock findByMagasinAndProduit(String libelleMagasin, String libelleProduit, List<Stock> stocks) {
         for (Stock stock : stocks) {
@@ -35,5 +47,14 @@ public class StockService {
             return 2;
         }
     }
-
+    
+      public int save (Stock stock,List<Stock> stocks) {
+          if(findById(stock.getId(),stocks)!=null){
+             return-1; 
+          }else{
+              stocks.add(stock);
+              return 1;
+          }
+      } 
+    
 }
