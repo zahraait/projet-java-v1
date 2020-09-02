@@ -56,5 +56,26 @@ public class StockService {
               return 1;
           }
       } 
+              public int ajouter (Stock stock,List<Stock> stocks) {
+          if(findByQte(stock.getQte(),stocks)!=null){
+             return-1; 
+          }else{
+              stocks.add(stock);
+              return 1;
+          }
+      } 
+ 
+     
+    public Stock findByQte(Double qte,List<Stock> stocks){
+       // ArrayList<Stock> listeQte=new ArrayList<>();
+        for (Stock s :stocks) {
+            if(s.getQte()==qte){
+                return s;
+            }
+           
+        }
+       return null;  
+    }
     
+      
 }
