@@ -5,15 +5,17 @@
         <group>
             <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/bean/Produit.java</file>
             <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/service/StockService.java</file>
-            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/util/DaoEngigne.java</file>
             <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/bean/OperationStock.java</file>
+            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/view/OperationStockView.java</file>
+            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/service/MagasinService.java</file>
+            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/service/ProduitService.java</file>
+            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/helper/AbstractHelperItem.java</file>
+            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/bean/Stock.java</file>
+            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/bean/Magasin.java</file>
             <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/view/MagasinView.java</file>
             <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/view/StockView.java</file>
             <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/helper/StockHelper.java</file>
-            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/service/MagasinService.java</file>
-            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/service/ProduitService.java</file>
             <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/service/OperationStockService.java</file>
-            <file>file:/C:/Users/HP%20PRO/Desktop/java/ProjetJava/src/bean/Magasin.java</file>
         </group>
     </open-files>
 </project-private>
