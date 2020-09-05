@@ -14,6 +14,7 @@ public class Stock {
     private Magasin magasin;
     private Double qte;
     private Produit produit;
+    
 
     public Stock() {
     }

@@ -5,6 +5,7 @@
  */
 package service;
 
+import bean.Magasin;
 import bean.Produit;
 import bean.Stock;
 import java.util.ArrayList;
@@ -48,6 +49,17 @@ public class StockService {
         }
     }
     
+      public int diminueQte(Stock stock, List<Stock> stocks) {
+        Stock myStock = findByMagasinAndProduit(stock.getMagasin().getLibelle(), stock.getProduit().getLibelle(), stocks);
+        if (myStock == null) {
+            return -1;
+        } else {
+            myStock.setQte(myStock.getQte() - stock.getQte());
+            return 1;
+        }
+    }
+    
+    
       public int save (Stock stock,List<Stock> stocks) {
           if(findById(stock.getId(),stocks)!=null){
              return-1; 
@@ -56,20 +68,13 @@ public class StockService {
               return 1;
           }
       } 
-              public int ajouter (Stock stock,List<Stock> stocks) {
-          if(findByQte(stock.getQte(),stocks)!=null){
-             return-1; 
-          }else{
-              stocks.add(stock);
-              return 1;
-          }
-      } 
+     
  
      
-    public Stock findByQte(Double qte,List<Stock> stocks){
+    public Stock findByProduit(String ProduitLibille,List<Stock> stocks){
        // ArrayList<Stock> listeQte=new ArrayList<>();
         for (Stock s :stocks) {
-            if(s.getQte()==qte){
+            if(s.getProduit().getLibelle().equals(ProduitLibille)){
                 return s;
             }
            
@@ -77,5 +82,18 @@ public class StockService {
        return null;  
     }
     
-      
+    
+    
+        public  List<Stock> findByMagasin(String MagasinLibille,List<Stock> stocks){
+        
+            List<Stock> listeMagasin=new ArrayList<Stock>();
+        
+        for (Stock s :stocks) {
+            if(s.getMagasin().getLibelle().equals(MagasinLibille)){
+                listeMagasin.add(s);
+            }
+           
+        }
+       return listeMagasin;  
+    }
 }
