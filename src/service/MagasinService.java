@@ -31,11 +31,12 @@ public class MagasinService {
         }     
     }
     public int delete (Magasin magasin,ArrayList<Magasin> magasins){
+       Magasin myMagasin=findBylibelleAndId(magasin.getLibelle(),magasin.getId(),magasins);
       if(findBylibelleAndId(magasin.getLibelle(),magasin.getId(),magasins)==null){
           return -1;
       }
         else{
-          magasins.remove(magasin);
+          magasins.remove(myMagasin);
           return 1;
       }
     }

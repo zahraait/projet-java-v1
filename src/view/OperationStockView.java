@@ -84,6 +84,11 @@ public class OperationStockView extends javax.swing.JFrame {
         jLabel5.setText("Type");
 
         jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Sortie", "Entrer" }));
+        jComboBox3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBox3ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -150,7 +155,7 @@ public class OperationStockView extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 347, Short.MAX_VALUE)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.Alignment.TRAILING)
         );
 
         pack();
@@ -189,6 +194,10 @@ public class OperationStockView extends javax.swing.JFrame {
         }
 // TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jComboBox3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBox3ActionPerformed
 
     /**
      * @param args the command line arguments
